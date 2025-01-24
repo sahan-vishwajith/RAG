@@ -27,8 +27,8 @@ def run_gradio():
         title="Gemini AI Chatbot",
         description="A chatbot powered by Google's Gemini API."
     )
-    # Use default Gradio behavior for Hugging Face Spaces
-    interface.launch(enable_queue=True)
+    # Default Gradio behavior
+    interface.launch(share=False, server_name="0.0.0.0", server_port=7861)
 
 # Flask API (for programmatic access)
 app = Flask(__name__)
